@@ -1,0 +1,23 @@
+<ng-container>
+  <div class="title-bar">
+    <span class="top-title">Fetured</span>
+    <span class="top-title">see all </span>
+    </div>
+<div class="featured-container">
+   <ion-card class="fetures-card">
+    <ion-card-content>
+      <ion-grid class="feture-grid">
+        <ion-row>
+          <ion-col *ngFor="let feature of features" size="3">
+            <div class="icon-container" (click)="openModal(feature)">
+              <img [src]="feature.imageUrl" class="icons-img" alt="{{ feature.title }}">
+            </div>
+            <span class="title">{{ feature.title }}</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+    
+</ion-card>
+</div>
+</ng-container>

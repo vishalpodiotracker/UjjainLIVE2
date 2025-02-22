@@ -1,0 +1,22 @@
+<div class="live-darshan-container">
+  <div class="title-wrapper">
+    <div class="ring-container">
+      <div class="ringring"></div>
+      <div class="circle"></div>
+    </div>
+    <span class="title">Live Darshan</span>
+  </div>
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <ion-card class="swiper-slide live-card" *ngFor="let item of liveDarshanVideos()">
+        <ion-card-content class="slide-content">
+          <iframe [src]="item?.sanitizedLink" frameborder="0"
+            allow="autoplay; clipboard-write; gyroscope; picture-in-picture;"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</div>

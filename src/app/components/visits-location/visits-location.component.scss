@@ -1,0 +1,142 @@
+
+.temple-image {
+    img {
+      width: 100%;
+      height: 250px;
+      border-radius: 0 0 20px 20px;
+      object-fit: cover;
+    }
+  }
+  
+  .temple-info {
+    text-align: center;
+    padding: 15px;
+    
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  
+    .ratings ion-icon {
+      color: gold;
+      font-size: 1.2rem;
+    }
+  
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+    }
+  }
+  
+  .temple-map {
+    padding: 15px;
+    text-align: center;
+  
+    img {
+      width: 100%;
+      height: 150px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  
+    p {
+      font-size: 0.9rem;
+      margin-top: 5px;
+      color: #2c2c2c;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+  }
+  
+  .temple-photos {
+    padding: 15px;
+  
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+  
+    img {
+      width: 100%;
+      border-radius: 10px;
+      height: 80px;
+      object-fit: cover;
+    }
+  }
+  .container{
+    position: absolute;
+    top: 25vh;
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    background-color: #ffffff;
+  }
+
+  .heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  .rating-stars {
+    display: flex;
+    gap: 4px;
+}
+
+.rating-stars ion-icon {
+    color: gold;
+    font-size: 15px;
+}
+
+.back-button {
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #817d7d71;
+    padding: 5px;
+    border-radius: 10px;
+
+}
+
+
+.photos-grid {
+  padding: 10px;
+}
+
+.photo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 5px;
+}
+
+.photo-item img {
+  width: 100px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.photo-item h3 {
+  margin: 10px 0 5px;
+  font-size: 0.8rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+.photo-item p {
+  font-size: 0.6rem;
+  text-align: left;
+  color: #666;
+}

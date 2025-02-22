@@ -1,0 +1,60 @@
+<ion-content [fullscreen]="true">
+  <div class="ion-header-container">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button class="menu-button"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <span class="header-title">Profile</span>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-icon name="notifications" class="header-notification"></ion-icon>
+        <ion-icon name="search" class="header-notification"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>
+    <ion-card class="profile-card">
+      <div class="profile-header">
+        <img class="profile-img" src="../../../assets/profile/img.png" alt="User Image">
+        <div class="profile-info">
+          <h2>स्वामी विश्वात्मानंद सरस्वतीजी</h2>
+          <p>Ujjain (MP)</p>
+        </div>
+      </div>
+    </ion-card>
+ </ion-header>
+</div>
+
+<ion-list class="profile-form">
+
+  <ion-item>
+    <ion-label position="stacked">Full Name</ion-label>
+    <ion-input type="text" value="स्वामी विश्वात्मानंद सरस्वतीजी"></ion-input>
+    <ion-icon name="create-outline" slot="start"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Location</ion-label>
+    <ion-input type="text" value="Ujjain (MP)"></ion-input>
+    <ion-icon name="create-outline" slot="start"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input type="email" value="example@example.com"></ion-input>
+    <ion-icon name="create-outline" slot="start"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Phone Number</ion-label>
+    <ion-input type="tel" value="+91 9876543210"></ion-input>
+    <ion-icon name="create-outline" slot="start"></ion-icon>
+  </ion-item>
+</ion-list>
+
+<div class="form-buttons">
+  <button  class="btn-grad">Save Changes</button>
+  <ion-button expand="block" fill="outline" color="medium">Cancel</ion-button>
+</div>
+
+</ion-content>

@@ -1,0 +1,232 @@
+
+<app-profile></app-profile>
+
+
+<!--  TEST SECTIOM  -->
+
+  <!-- <div class="profile-row">
+
+      <ion-chip  (click)="showContentHandler('order')">
+        <ion-avatar>
+          <img alt="Order Info Icon" src="../../../assets/icon/img7.png" />
+        </ion-avatar>
+        <ion-label>Orders</ion-label>
+      </ion-chip>
+
+      <ion-chip  (click)=" showContentHandler('profile')">
+        <ion-avatar>
+          <img alt="Profile Icon" src="/assets/icon/img10.png" />
+        </ion-avatar>
+        <ion-label>Profile</ion-label>
+      </ion-chip>
+
+      <ion-chip  (click)="showContentHandler('booking')">
+        <ion-avatar>
+          <img alt="Bookings Icon" src="/assets/icon/img6.png" />
+        </ion-avatar>
+        <ion-label>Bookings</ion-label>
+      </ion-chip>
+
+      <ion-chip  (click)="showContentHandler('history')">
+        <ion-avatar>
+          <img alt="Bookings Icon" src="/assets/icon/img8.png" />
+        </ion-avatar>
+        <ion-label>History</ion-label>
+      </ion-chip>
+
+
+  </div>
+   -->
+
+<!-- Order Info Section Start -->
+<!-- <ion-grid class="order-info-grid" *ngIf="showContent() === 'order'">
+<div class="section-title">Active Orders</div>
+<ion-grid class="order-list-grid">
+  <ion-row class="order-row">
+    <ion-col size="4" class="image-col">
+      <img src="../../assets/temple/img1.jpg" alt="Prasad" class="service-image" />
+    </ion-col>
+    <ion-col size="8" class="details-col">
+      <span class="service-title">Prasad</span>
+      <span class="service-subtitle">Delicious offerings for your darshan</span>
+      <div class="order-details">
+        <span><strong>Price:</strong> ₹500</span>
+        <span><strong>Status:</strong> Confirmed</span>
+        <span><strong>Date:</strong> 29 Dec 2024</span>
+      </div>
+      <ion-button color="primary" expand="block">View Details</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="order-row">
+    <ion-col size="4" class="image-col">
+      <img src="../../assets/temple/img2.jpg" alt="Travels" class="service-image" />
+    </ion-col>
+    <ion-col size="8" class="details-col">
+      <span class="service-title">Travels</span>
+      <span class="service-subtitle">Comfortable rides to the temple</span>
+      <div class="order-details">
+        <span><strong>Price:</strong> ₹1500</span>
+        <span><strong>Status:</strong> Scheduled</span>
+        <span><strong>Date:</strong> 01 Jan 2025</span>
+      </div>
+      <ion-button color="primary" expand="block">View Details</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="order-row">
+    <ion-col size="4" class="image-col">
+      <img src="../../assets/temple/img3.jpg" alt="Hotel" class="service-image" />
+    </ion-col>
+    <ion-col size="8" class="details-col">
+      <span class="service-title">Hotel</span>
+      <span class="service-subtitle">Stay near the temple with ease</span>
+      <div class="order-details">
+        <span><strong>Price:</strong> ₹3000</span>
+        <span><strong>Status:</strong> Confirmed</span>
+        <span><strong>Date:</strong> 31 Dec 2024</span>
+      </div>
+      <ion-button color="primary" expand="block">View Details</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="order-row">
+    <ion-col size="4" class="image-col">
+      <img src="../../assets/temple/img4.jpg"  alt="Online E-Darshan" class="service-image" />
+    </ion-col>
+    <ion-col size="8" class="details-col">
+      <span class="service-title">Online E-Darshan</span>
+      <span class="service-subtitle">Experience divine darshan from your home</span>
+      <div class="order-details">
+        <span><strong>Price:</strong> ₹200</span>
+        <span><strong>Status:</strong> Completed</span>
+        <span><strong>Date:</strong> 28 Dec 2024</span>
+      </div>
+      <ion-button color="primary" expand="block">Watch Again</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  <div class="section-subtitle">Quick Actions</div>
+  <ion-row class="actions-row">
+    <ion-col size="4">
+      <ion-card class="action-card" button routerLink="/tabs/order-history">
+        <ion-icon name="time-outline" class="action-icon"></ion-icon>
+        <ion-label>Order History</ion-label>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card class="action-card" button routerLink="/tabs/track-order">
+        <ion-icon name="location-outline" class="action-icon"></ion-icon>
+        <ion-label>Track Order</ion-label>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card class="action-card" button routerLink="/tabs/notifications">
+        <ion-icon name="notifications-outline" class="action-icon"></ion-icon>
+        <ion-label>Notifications</ion-label>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <div class="section-subtitle">Settings</div>
+  <ion-row>
+    <ion-col size="6">
+      <ion-card class="action-card" button routerLink="/tabs/settings">
+        <ion-icon name="settings-outline" class="action-icon"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6">
+      <ion-card class="action-card" button routerLink="/tabs/help">
+        <ion-icon name="help-circle-outline" class="action-icon"></ion-icon>
+        <ion-label>Help & Support</ion-label>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-grid class="custom-grid" *ngIf="showContent() === 'profile'">
+  <div class="section-title">Edit Profile</div>
+  <ion-row>
+    <ion-col size="4" class="icon-card" button routerLink="/tabs/order-history">
+      <div class="icon-section">
+        <ion-icon name="time" class="grid-icon"></ion-icon>
+        <ion-label>Order History</ion-label>
+      </div>
+    </ion-col>
+    <ion-col size="4" class="icon-card" button routerLink="/tabs/notifications">
+      <div class="icon-section">
+        <ion-icon name="notifications" class="grid-icon"></ion-icon>
+        <ion-label>Notifications</ion-label>
+      </div>
+    </ion-col>
+    <ion-col size="4" class="icon-card" button routerLink="/tabs/settings">
+      <div class="icon-section">
+        <ion-icon name="settings" class="grid-icon"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-grid class="custom-grid" *ngIf="showContent() === 'booking'">>
+  <div class="section-title">Booking Details</div>
+  <ion-row>
+    <ion-col size="4" class="icon-card" button routerLink="/tabs/prasad-booking">
+      <div class="icon-section">
+        <ion-icon name="gift" class="grid-icon"></ion-icon>
+        <ion-label>Prasad</ion-label>
+      </div>
+    </ion-col>
+    <ion-col size="4" class="icon-card" button routerLink="/tabs/e-aarti">
+      <div class="icon-section">
+        <ion-icon name="flame" class="grid-icon"></ion-icon>
+        <ion-label>E-Aarti</ion-label>
+      </div>
+    </ion-col>
+    <ion-col size="4" class="icon-card" button routerLink="/tabs/e-darshan">
+      <div class="icon-section">
+        <ion-icon name="eye" class="grid-icon"></ion-icon>
+        <ion-label>E-Darshan</ion-label>
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="4" class="icon-card" button routerLink="/tabs/hotel-booking">
+      <div class="icon-section">
+        <ion-icon name="bed" class="grid-icon"></ion-icon>
+        <ion-label>Booking</ion-label>
+      </div>
+    </ion-col>
+    <ion-col size="4" class="icon-card" button routerLink="/tabs/e-darshan">
+      <div class="icon-section">
+        <ion-icon name="eye" class="grid-icon"></ion-icon>
+        <ion-label>E-Darshan</ion-label>
+      </div>
+    </ion-col>
+    <ion-col size="4" class="icon-card" button routerLink="/tabs/prasad-booking">
+      <div class="icon-section">
+        <ion-icon name="gift" class="grid-icon"></ion-icon>
+        <ion-label>Prasad</ion-label>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-grid class="custom-grid" *ngIf="showContent() === 'history'">
+  <div class="section-title">History </div>
+  <ion-row>
+    <ion-col size="4" class="icon-card" button routerLink="/tabs/order-history">
+      <div class="icon-section">
+        <ion-icon name="time" class="grid-icon"></ion-icon>
+        <ion-label>Order History</ion-label>
+      </div>
+    </ion-col>
+    <ion-col size="4" class="icon-card" button routerLink="/tabs/notifications">
+      <div class="icon-section">
+        <ion-icon name="notifications" class="grid-icon"></ion-icon>
+        <ion-label>Notifications</ion-label>
+      </div>
+    </ion-col>
+    <ion-col size="4" class="icon-card" button routerLink="/tabs/settings">
+      <div class="icon-section">
+        <ion-icon name="settings" class="grid-icon"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content> -->

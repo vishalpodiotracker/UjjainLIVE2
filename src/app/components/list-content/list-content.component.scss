@@ -1,0 +1,99 @@
+.ion-header-container {
+    height: 100vh;
+    overflow: scroll;
+}
+
+::ng-deep ion-header {
+    padding: 5px;
+    background: var(--ion-primary-gradient);
+    height: 25vh;
+    border-radius: 0 0 20px 20px;
+
+    ion-toolbar {
+        --background: transparent;
+        --border: none;
+        --border-style: none;
+        color: var(--ion-color-tertiary-contrast);
+    }
+
+
+
+    .header-notification {
+        font-size: 1.3rem;
+    }
+
+    .menu-button {
+        color: var(--ion-color-tertiary-contrast);
+        font-size: 2rem;
+    }
+
+    .temp-title {
+            display: flex;
+            flex-direction: column;
+            padding: 8px;
+            position: relative;
+            top: 10vh;
+            left: 19vh;
+            backdrop-filter: blur(3px) saturate(94%);
+            -webkit-backdrop-filter: blur(3px) saturate(94%);
+            background-color: rgb(32 32 32 / 24%);
+            border-radius: 12px 0px 0px 12px;
+            border: 1px solid rgba(209, 213, 219, 0.3);
+            width: 59%;
+    }
+
+    .title {
+        color: var(--ion-color-tertiary-contrast);
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--ion-color-tertiary-contrast);
+        position: relative;
+        left: 0vh;
+        margin-top: 0vh;
+
+    }
+
+}
+
+.temple-img img {
+    width: 100%;
+    height: 99px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+.temple-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    padding: 10px;
+    :nth-child(1) {
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+    :nth-child(2) {
+        font-size: 1.2rem;
+    }
+}
+.rating-stars {
+    display: flex;
+    gap: 4px;
+}
+
+.rating-stars ion-icon {
+    color: gold;
+    font-size: 15px;
+}
+
+.temple-rating-stars ion-icon {
+    color: rgb(255, 189, 47);
+    font-size: 15px;
+    line-height: 0px;
+}
+
+.temple-list {
+    height: auto;
+    ion-row {
+        height: 100%;
+    }
+}

@@ -1,0 +1,103 @@
+::ng-deep ion-header {
+    padding: 5px;
+    background-image: url('../../../assets/temple/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 27vh;
+    border-radius: 0 0 20px 20px;
+    position: sticky;
+    ion-toolbar {
+        --background: transparent;
+        --border: none;
+        --border-style: none;
+        color: var(--ion-color-tertiary-contrast);
+    }
+
+    .header-title {
+        font-size: 1.3rem;
+        font-family: var(--font-family);
+    }
+
+    .header-notification {
+        font-size: 1.3rem;
+    }
+
+    .menu-button {
+        color: var(--ion-color-tertiary-contrast);
+        font-size: 2rem;
+    }
+    .title {
+        color: var(--ion-color-tertiary-contrast);
+        position: absolute;
+        font-size: 1rem;
+    }
+}
+
+.swiper-container {
+    margin-top: 2vh;
+
+    img {
+    max-width: 100%;
+    }
+}
+
+::ng-deep .ion-card-swiper{
+    height: 80px !important;
+    width: 140px !important;
+
+}
+.slide-content{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+::ng-deep .slide-title{
+    font-size: 0.7rem;
+    color: #ffffff;
+    position: relative;
+    text-overflow: ellipsis;
+    top: 52px;
+    left: 10px;
+}
+
+  ::ng-deep .card-content-ios {
+    width: 100% !important;
+    padding: 0 !important;
+    height: 100%;
+  }
+  
+  .card-content-md {
+    width: 100% !important;
+    padding: 0 !important;
+    height: 100%;
+  }
+  
+  ion-card {
+    border-radius: 10px !important;
+  }
+.slide-content {
+    img {
+        max-width: 100%;
+    }
+}
+  /* iPhone */
+@media screen and (min-device-width: 370px) and (max-device-width: 435px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    
+    .swiper-container{
+        //width: 190px !important;
+    }
+
+    // .title {
+    //     left: -16vh;
+    //     margin-top: -3.5vh;
+    // }
+
+    ion-header {
+        height: 23vh;
+    }
+
+    
+  }
+
+

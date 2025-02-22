@@ -1,0 +1,83 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap");
+
+:root {
+    --font-family:  'Poppins', sans-serif;
+	--font-family2: 'Montserrat', sans-serif;
+	--font-family3: 'Open Sans", serif';
+	--font-family4: 'Rubik,serif';        
+	--ion-color-primary: #FB9733;
+	--ion-color-primary-rgb: 255,172,56;
+	--ion-color-primary-contrast: #000000;
+	--ion-color-primary-contrast-rgb: 0,0,0;
+	--ion-color-primary-shade: #e09731;
+	--ion-color-primary-tint: #ffb44c;
+	--ion-primary-gradient: linear-gradient(103.61deg, rgba(255, 81, 6, 0.68) 7.22%, #FB9733 103.38%);
+
+
+	--ion-color-secondary: #A40000;
+	--ion-color-secondary-rgb: 164,0,0;
+	--ion-color-secondary-contrast: #ffffff;
+	--ion-color-secondary-contrast-rgb: 255,255,255;
+	--ion-color-secondary-shade: #900000;
+	--ion-color-secondary-tint: #ad1a1a;
+
+	--ion-color-tertiary: #A40000;
+	--ion-color-tertiary-rgb: 164,0,0;
+	--ion-color-tertiary-contrast: #ffffff;
+	--ion-color-tertiary-contrast-rgb: 255,255,255;
+	--ion-color-tertiary-shade: #900000;
+	--ion-color-tertiary-tint: #ad1a1a;
+
+	--ion-color-success: #6cc86a;
+	--ion-color-success-rgb: 108,200,106;
+	--ion-color-success-contrast: #000000;
+	--ion-color-success-contrast-rgb: 0,0,0;
+	--ion-color-success-shade: #5fb05d;
+	--ion-color-success-tint: #7bce79;
+
+	--ion-color-warning: #ffc400;
+	--ion-color-warning-rgb: 255,196,0;
+	--ion-color-warning-contrast: #000000;
+	--ion-color-warning-contrast-rgb: 0,0,0;
+	--ion-color-warning-shade: #e0ac00;
+	--ion-color-warning-tint: #ffca1a;
+
+	--ion-color-danger: #ff4242;
+	--ion-color-danger-rgb: 255,66,66;
+	--ion-color-danger-contrast: #000000;
+	--ion-color-danger-contrast-rgb: 0,0,0;
+	--ion-color-danger-shade: #e03a3a;
+	--ion-color-danger-tint: #ff5555;
+
+	--ion-color-light: #f6f8fc;
+	--ion-color-light-rgb: 246,248,252;
+	--ion-color-light-contrast: #000000;
+	--ion-color-light-contrast-rgb: 0,0,0;
+	--ion-color-light-shade: #d8dade;
+	--ion-color-light-tint: #f7f9fc;
+
+	--ion-color-medium: #5f5f5f;
+	--ion-color-medium-rgb: 95,95,95;
+	--ion-color-medium-contrast: #ffffff;
+	--ion-color-medium-contrast-rgb: 255,255,255;
+	--ion-color-medium-shade: #545454;
+	--ion-color-medium-tint: #6f6f6f;
+
+	--ion-color-dark: #2f2f2f;
+	--ion-color-dark-rgb: 47,47,47;
+	--ion-color-dark-contrast: #ffffff;
+	--ion-color-dark-contrast-rgb: 255,255,255;
+	--ion-color-dark-shade: #292929;
+	--ion-color-dark-tint: #444444;
+
+}

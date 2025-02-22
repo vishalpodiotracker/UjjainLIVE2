@@ -1,0 +1,8 @@
+<ion-tabs >
+<ion-tab-bar slot="bottom" class="tab-section">
+    <ion-tab-button [tab]="item?.name" *ngFor="let item of tabsList(); let i = index" (click)="redirectTo(item?.link)" >
+      <ion-icon [name]="item?.icon"></ion-icon>
+      <ion-label>{{item?.name['en']}}</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

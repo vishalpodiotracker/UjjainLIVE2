@@ -1,0 +1,39 @@
+<div class="ion-header-container">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button class="menu-button"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <span class="header-title">Notification</span>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-icon name="notifications" class="header-notification"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>
+ </ion-header>
+</div>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let notification of notifications">
+      <!-- Notification Content -->
+      <ion-item>
+        <ion-icon [name]="notification.icon" style="color: rgb(255, 148, 8);" slot="start"></ion-icon>
+        <ion-label>
+          <h2>{{ notification.title }}</h2>
+          <p>{{ notification.message }}</p>
+        </ion-label>
+        <ion-note slot="end">{{ notification.timestamp }}</ion-note>
+      </ion-item>
+
+      <!-- Sliding Options -->
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deleteNotification(notification.id)">
+          <ion-icon name="trash-outline"></ion-icon>
+          Delete
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,16 @@
+<ng-container>
+    <div class="events-container">
+        <span class="title">Temple Events</span>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <ion-card class="swiper-slide" *ngFor="let slide of templeEvents">
+                    <ion-card-content class="slide-content">
+                        <img [src]="slide.image" alt="">
+                        <span class="slide-title">"{{ slide.name }}"</span>
+                    </ion-card-content>
+                </ion-card>
+
+            </div>
+        </div>
+    </div>
+</ng-container>

@@ -1,0 +1,28 @@
+
+
+  ion-tab-bar{
+    background-image:url('../../assets/temple/b2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65px;
+    border-radius: 20px 20px 0px 0px;
+  }
+  ion-tab-button {
+    --color: #fafafa !important;
+    background: transparent !important;
+  }
+  .tab-selected {
+    color: var(--ion-color-dark) !important;
+  }
+  ion-icon{
+    font-size: 1.5rem;
+  }
+  ion-label {
+    font-size: 1rem;
+  }
+@media (min-width: 1025px) {
+  .tab-section{
+    display: none;
+  }
+}

@@ -1,0 +1,30 @@
+
+<div class="select-language-conatiner">
+  <svg class="wave wave-top" viewBox="0 0 392 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M-1 119C-1 119 155 -41.9844 195.5 119C236 279.985 392 119 392 119L392 -61.9997L-1 -61.9997L-1 119Z" fill="#FFA500"/>
+   </svg>
+    
+  <div class="select-language-header">
+    <span>Select Language</span>
+  </div>
+  <div class="language-selector-container">
+    <ion-item lines="none">
+      <ion-label>
+        <img [src]="selectedLanguage.flag" alt="Selected Language Flag" class="flag-icon" />
+        {{ selectedLanguage.name }}
+      </ion-label>
+
+      <ion-select label="Language" label-placement="floating" (ionChange)="onLanguageChange($event)"
+        class="language-selector">
+        <ion-select-option *ngFor="let language of languages" [value]="language">
+          <img [src]="language.flag" alt="{{ language.name }} Flag" class="flag-icon-inline" />
+          {{ language.name }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+   <ion-button (click)="next()"  expand="block" color="secondary" class="next-button">Go Next</ion-button>
+   <svg class="wave wave-bottom" viewBox="0 0 393 193" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 71.5487C0 71.5487 156 232.533 196.5 71.5487C237 -89.4358 393 71.5487 393 71.5487V252.549H0V71.5487Z" fill="#FFA500"/>
+    </svg>
+</div>

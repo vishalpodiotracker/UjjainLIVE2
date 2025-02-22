@@ -1,0 +1,54 @@
+.menu-header-bg {
+    background-image: url('../assets/temple/b2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    width: 350px;
+    box-shadow: 0px 1px 10px rgba(98,140,255,0.5);
+    transform: rotate(-15deg);
+    border-radius: 10px 10px 10px 50px;
+    margin-top: -50px;
+    margin-left: -18px;
+    margin-bottom: 60px;
+
+}
+
+@media (min-width: 1025px) {
+    .menu-header-bg {
+        width: 105%;
+    }
+}
+
+.user-profile{
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left:15px;
+    display: flex;
+    align-items: center;
+  
+
+    img{
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        border: 7px solid #ffff;
+    }
+   .name-wrapper{
+    margin-left: 10px;
+   
+    .name-tilte{
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #ffff;
+
+    }
+    .name-sub-tilte{
+        font-size: 0.8rem;
+        color: #ffff;
+    }
+
+   }
+
+}

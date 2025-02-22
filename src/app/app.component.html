@@ -1,0 +1,30 @@
+<ion-app>
+  <ion-split-pane menuId="menu-bar" contentId="main-content">
+    <!-- Sidebar Menu -->
+    <ion-menu contentId="main-content">
+      <div class="menu-header-bg"></div>
+       <div class="user-profile">
+        <img class="name-tilte" src="../../../assets/profile/img.png">
+        <div class="name-wrapper">
+          <span class="name-tilte">स्वामी विश्वात्मानंद सरस्वतीजी</span>
+          <br>
+          <span class="name-sub-tilte">Ujjain(MP)</span>
+        </div>
+       </div>
+
+      <ion-content>
+        <ion-list *ngFor="let item of menuList()">
+          @if(item.visible_at === 'Side Menu'){
+            <ion-item routerDirection="forward" (click)="nevigateTo(item.link)">
+              <ion-icon slot="start" [name]="item.icon"></ion-icon>
+              <ion-label>{{item.name['en']}}</ion-label>
+            </ion-item>
+
+          }
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <!-- Main Content -->
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

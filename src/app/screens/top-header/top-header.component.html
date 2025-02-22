@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button class="menu-button"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <span class="header-title">Ujjain Live</span>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-icon name="notifications" class="header-notification"></ion-icon>
+        <ion-icon name="search" class="header-notification"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>
+   <!-- Swiper Container -->
+  <ion-title class="title">Teamples</ion-title>
+  <div class="swiper-container">
+<!-- swiper-list.component.html -->
+<div class="swiper-wrapper">
+  <!-- Dynamically Render Slides -->
+  <ion-card class="swiper-slide ion-card-swiper" *ngFor="let slide of slideContents(); let i = index">
+    <ion-card-content class="slide-content"  [ngStyle]="{'background': 'url(' + slide.image[0].img + ')', 'background-size': 'cover', 'background-position': 'center', 'background-repeat': 'no-repeat' }" (click)="openSlide(i)">
+      <!-- <img [src]="slide.image[0].img" alt=""> -->
+      <span class="slide-title" >{{ slide.title['en']?.replace('Temple', '') }}</span>
+    </ion-card-content>
+  </ion-card>
+</div>
+  </div>
+
+</ion-header>
