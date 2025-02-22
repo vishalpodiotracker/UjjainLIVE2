@@ -1,0 +1,1 @@
+import{e as r,f as n,ha as e}from"./chunk-WUEZ35MM.js";var l=(()=>{let t=class t{constructor(){this.http=n(e),this.baseUrl="https://ujjainliveapp.link4.in/api"}getMenuItems(){return this.http.get(`${this.baseUrl}/information`,{})}};t.\u0275fac=function(o){return new(o||t)},t.\u0275prov=r({token:t,factory:t.\u0275fac,providedIn:"root"});let i=t;return i})();export{l as a};

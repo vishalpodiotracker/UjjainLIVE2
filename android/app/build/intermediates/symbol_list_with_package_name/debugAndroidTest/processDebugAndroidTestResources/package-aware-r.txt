@@ -1,0 +1,3 @@
+com.ujjainlive.Ujjainlive.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme
