@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.ujjainlive.Ujjainlive.app-mergeDebugResources-24:/values-v24/values-v24.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Eway\\.gradle\\caches\\8.10.2\\transforms\\4d985a7728902d62d096cd0de44b9976\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                }
+            ]
+        }
+    ]
+}
