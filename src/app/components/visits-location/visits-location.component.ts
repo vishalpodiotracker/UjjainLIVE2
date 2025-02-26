@@ -1,6 +1,6 @@
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { Component, Input, OnInit, signal } from '@angular/core';
-import { IonHeader, IonContent,  IonIcon, IonList,IonCard,IonCardTitle,IonCardHeader,IonCardContent,IonItem, IonButtons, IonMenuButton, IonGrid, IonCol, IonRow, IonChip, IonAvatar, IonInput, IonButton, ModalController, IonBackButton } from '@ionic/angular/standalone';
+import { IonHeader, IonContent,  IonIcon, IonList,IonCard,IonCardTitle,IonCardHeader,IonCardContent,IonItem, IonButtons, IonMenuButton, IonGrid, IonCol, IonRow, IonButton, ModalController } from '@ionic/angular/standalone';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -28,9 +28,6 @@ export class VisitsLocationComponent implements OnInit {
       const dataArry = data?.posts ?? [];
       this.postsData$.next(dataArry);
     }
-
-    console.info("postsSignal", this.postsData$.value);
-    console.info("templeVistData", this.templeVistData);
      // Access data here
   }
 
@@ -51,7 +48,6 @@ export class VisitsLocationComponent implements OnInit {
   }
 
   async openModal( item : any ,index: number) {
-    console.info('slide:', index,item);
       const modal = await this.modalController.create({
         component: VisitsLocationComponent,
         componentProps: { templeVistData: item, userIndex: index },

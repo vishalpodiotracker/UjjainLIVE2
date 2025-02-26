@@ -28,7 +28,6 @@
     width: 100% !important;
     padding: 0 !important;
     height: 100%;
-    background: #ff8a5030;
   }
   
   .card-content-md {
@@ -39,4 +38,27 @@
   
   ion-card {
     border-radius: 15px !important;
+  }
+  .event-title{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    position: relative;
+    top: 14vh;
+    right: 0px;
+    backdrop-filter: blur(3px) saturate(94%);
+    -webkit-backdrop-filter: blur(3px) saturate(94%);
+    background-color: rgb(110 99 84 / 56%);
+    width: 100%;
+
+   :nth-child(1) {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-style: italic;
+    } 
+    :nth-child(2) {
+      color: #fff;
+      font-size: 1rem;
+    }
+
   }

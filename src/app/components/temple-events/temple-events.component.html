@@ -3,11 +3,14 @@
         <span class="title">Temple Events</span>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <ion-card class="swiper-slide" *ngFor="let slide of templeEvents">
-                    <ion-card-content class="slide-content">
-                        <img [src]="slide.image" alt="">
-                        <span class="slide-title">"{{ slide.name }}"</span>
+                <ion-card class="swiper-slide" *ngFor="let slide of templeEvents" (click)="openModal(slide)">
+                    <ion-card-content class="slide-content" [ngStyle]="{'background': 'url(' + slide.imageUrl + ')', 'background-size': 'cover', 'background-position': 'center', 'background-repeat': 'no-repeat' }">
+                    <div class="event-title">
+                        <span>{{ slide.name }}</span>
+                        <span>{{ slide.date }}</span>
+                    </div>
                     </ion-card-content>
+
                 </ion-card>
 
             </div>

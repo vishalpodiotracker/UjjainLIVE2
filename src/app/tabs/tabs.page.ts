@@ -35,12 +35,10 @@ export class TabsPage {
       const data = res?.data?.menu;
       const tabsMenu = data.filter((item: any) => item.visible_at === 'Tab');
       this.tabsList.set(tabsMenu); //res.data.menu;
-      console.info(res, this.tabsList());
     });
   }
 
   redirectTo(path: string) {
-    console.info('path:', path);
     this.router.navigateByUrl(path);
   }
   list = document.querySelectorAll('.list');

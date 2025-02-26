@@ -69,8 +69,10 @@
 }
   ::ng-deep ion-header {
     padding: 5px;
-    background: var(--ion-primary-gradient);
-    height: 8vh;
+    background-image:url('../../../assets/temple/b2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 0 0 20px 20px;
     ion-toolbar {
         --background: transparent;
@@ -86,7 +88,7 @@
     }
 
     .header-notification {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .menu-button {
@@ -382,7 +384,7 @@ padding: 16px;
   .visit-list-img {
     width: 70px;
     height: 70px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-right:20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
@@ -392,7 +394,8 @@ padding: 16px;
     font-size: 1rem;
     text-align: start;
     font-weight: bold;
-    line-height: 30px;
+    line-height: 20px;
+    color: #5d5d5d;
   }
   
   .visit-list-info p {

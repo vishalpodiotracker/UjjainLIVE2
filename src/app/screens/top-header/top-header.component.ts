@@ -29,7 +29,6 @@ constructor(private templeService: TempleService) {
   this.templeService.getPostData().subscribe((res:any) => {
     const postData = res.data.posts.filter((item: any) => item.category_id === 1);
     this.slideContents.set(postData);
-    console.log("this.slideContents",this.slideContents());
   });
 
 

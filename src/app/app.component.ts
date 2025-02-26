@@ -43,7 +43,6 @@ export class AppComponent {
     addIcons(allIcons);
     this.theamService.getMenuItems().subscribe((res:any) => {
       this.menuList.set(res?.data?.menu); //res.data.menu;
-      console.info(res, this.menuList());
     });
   }
   nevigateTo(url: string) {

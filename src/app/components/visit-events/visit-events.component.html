@@ -1,0 +1,81 @@
+<ion-content>
+  <ion-icon name="chevron-back" class="back-button" (click)="closeModale()"></ion-icon>
+  <!-- Temple Image -->
+  <div class="temple-image">
+    <img [src]="eventsVisitData.imageUrl" alt="Holy Cat Temple" />
+  </div>
+  <div class="container">
+    <div class="event-card">
+      <!-- Event Header -->
+      <div class="event-header">
+        <span class="event-title">{{eventsVisitData.name}} </span>
+        <span class="event-price"><ion-icon name="location-outline"></ion-icon><span>{{eventsVisitData.location}}
+          </span></span>
+      </div>
+      <!-- Event Location -->
+      <div class="event-location">
+        <!-- <ion-icon name="location-outline"></ion-icon>
+      <span>{{eventsVisitData.location}} </span> -->
+        <ion-icon name="calendar"></ion-icon>
+        <span>{{eventsVisitData.date}}</span>
+      </div>
+
+      <!-- Event Description -->
+      <p class="event-description">
+        {{truncateText(eventsVisitData.description, 150)}}
+      </p>
+
+      <!-- Organizer Details -->
+      <div class="organizer-details">
+        <div class="organizer-info">
+          <img src="../../../assets/logos/logo.png" alt="Organizer" class="organizer-avatar" />
+          <div>
+            <p class="organizer-name">Mahakal Samiti,(Ujjain)</p>
+            <p class="organizer-role">Organizer</p>
+          </div>
+        </div>
+        <button class="follow-btn">Follow</button>
+      </div>
+
+    </div>
+    <div class="events-section">
+      <!-- Today's Event -->
+
+
+
+      <!-- Upcoming Events -->
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <ion-card class="swiper-slide event-card" *ngFor="let slide of fullData" (click)="openModal(slide)">
+            <ion-card-content>
+              <div class="event-image">
+                <img [src]="slide.imageUrl" alt="Holy Cat Temple" />
+              </div>
+              <div class="event-header">
+
+                <span class="event-title">{{slide.name}}</span>
+              </div>
+
+
+
+              <p class="event-description">
+                {{truncateText(slide.description, 50)}}
+              </p>
+
+              <div class="event-actions">
+                <button class="view-btn">View Details</button>
+                <div class="event-location">
+                  <ion-icon name="location-outline"></ion-icon>
+                  <span>{{slide.location}}</span>
+                </div>
+              </div>
+            </ion-card-content>
+
+          </ion-card>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

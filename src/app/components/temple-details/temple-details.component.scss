@@ -1,12 +1,15 @@
 
 
 .ion-header-container{
-    height: 11vh;
+  height: auto;
 }
 ::ng-deep ion-header {
     padding: 5px;
-    background: var(--ion-primary-gradient);
-    height: 10vh;
+    height: auto;
+    background-image:url('../../../assets/temple/b2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 0 0 20px 20px;
     ion-toolbar {
         --background: transparent;

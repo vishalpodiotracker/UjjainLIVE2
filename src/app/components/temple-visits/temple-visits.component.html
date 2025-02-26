@@ -9,8 +9,8 @@
       <ion-buttons slot="start">
         <span class="header-title">How to visit</span>
       </ion-buttons>
-      <ion-buttons slot="end">
-        <ion-icon name="map-outline" class="header-notification"></ion-icon>
+      <ion-buttons slot="end" (click)="redirectTo('/tabs/home')">
+        <ion-icon name="home" class="header-notification"></ion-icon>
       </ion-buttons>
     </ion-toolbar>
     <!-- <ion-card class="visit-card">

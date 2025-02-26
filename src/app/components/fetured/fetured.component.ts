@@ -34,10 +34,8 @@ export class FeturedComponent  implements OnInit {
   
   constructor(private hotelService: HotelService,private templeService: TempleService) { 
     this.templeService.getCategouriesData().subscribe((res:any)=>{
-    console.info("RES-REA",res)
     const categories = res.data.categories
     this.categoriesSignal.set(categories)
-    console.info("categories",categories)
     })
     addIcons(allIcons);
   }
@@ -47,7 +45,6 @@ export class FeturedComponent  implements OnInit {
   ngOnInit() {}
 
   async openModal(listData: any) {
-      console.info('slide:', listData);
         const modal = await this.modalController.create({
           component: ListContentComponent,
           componentProps: { listData },

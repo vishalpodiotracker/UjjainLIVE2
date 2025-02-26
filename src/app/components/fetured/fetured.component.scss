@@ -69,8 +69,12 @@ ion-col {
 
 .fetures-card{
  margin-top: 7px;
- width: 95%;
  border-radius: 15px;
+ background-image: url('../../../assets/temple/bg3.jpg');
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
 
 }
 

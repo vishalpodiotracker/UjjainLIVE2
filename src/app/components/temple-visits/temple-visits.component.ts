@@ -15,6 +15,7 @@ import {
 } from '@ionic/angular/standalone';
 import { VisitsLocationComponent } from '../visits-location/visits-location.component';
 import { TempleService } from 'src/app/services/temples/temple.service';
+import { Router } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -37,6 +38,7 @@ import { TempleService } from 'src/app/services/temples/temple.service';
 export class TempleVisitsComponent  implements OnInit {
  howToVisitData = signal([]);
  modalController = inject(ModalController)
+ router = inject(Router)
 
   constructor(private templeService: TempleService) {
     this.templeService.getHowToVisitData().subscribe((res:any) => {
@@ -51,12 +53,13 @@ export class TempleVisitsComponent  implements OnInit {
 
 
   async openModal(index?: number) {
-    console.info('slide:', index);
       const modal = await this.modalController.create({
         component: VisitsLocationComponent,
         componentProps: { howToVisitData: this.howToVisitData(), userIndex: index },
       });
       return await modal.present();
   }
-
+  redirectTo(pageUrl: string) {
+    this.router.navigateByUrl(pageUrl);
+  }
 }

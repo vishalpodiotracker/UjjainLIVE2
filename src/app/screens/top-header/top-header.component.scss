@@ -4,7 +4,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 27vh;
+    height: auto;   
     border-radius: 0 0 20px 20px;
     position: sticky;
     ion-toolbar {
@@ -30,13 +30,13 @@
     .title {
         color: var(--ion-color-tertiary-contrast);
         position: absolute;
+        top: 27%;
+        left: 5%;
         font-size: 1rem;
     }
 }
 
 .swiper-container {
-    margin-top: 2vh;
-
     img {
     max-width: 100%;
     }
@@ -75,6 +75,7 @@
   
   ion-card {
     border-radius: 10px !important;
+    padding: 0px !important;
   }
 .slide-content {
     img {
@@ -93,11 +94,11 @@
     //     margin-top: -3.5vh;
     // }
 
-    ion-header {
-        height: 23vh;
-    }
-
     
   }
+
+.swiper-wrapper{
+    padding: 0;
+}
 
 
