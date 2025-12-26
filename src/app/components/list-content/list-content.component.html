@@ -1,30 +1,37 @@
 <div class="ion-header-container">
   <!-- Header Section -->
-  <ion-header
-    [ngStyle]="{'background': 'url(' + listContent()[0].image[0].img + ') no-repeat', 'background-size': 'cover', 'background-position': 'center'}" [ngStyle]="{'background': 'url(' + listContent()[0].image[0].img + ')', 'background-size': 'cover', 'background-position': 'center'}">
+   <ion-header>
     <ion-toolbar>
-      <ion-buttons slot="end" (click)="closeModal()">
-        <ion-icon class="menu-button" name="close-circle"></ion-icon>
+      <ion-buttons slot="start">
+        <ion-menu-button class="menu-button"></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <span class="header-title">Temples</span>
+      </ion-buttons>
+      <ion-buttons slot="end" (click)="redirectTo('/tabs/home')">
+        <ion-icon name="home" class="header-notification"></ion-icon>
       </ion-buttons>
     </ion-toolbar>
-    <div class="temp-title">
-      <span class="title">{{truncateText(2,listContent()[0]?.title['en'])}}</span>
-      <div class="rating-stars">
-        <ion-icon *ngFor="let star of getStars(5.0)" [name]="star"></ion-icon>
+    <!-- <ion-card class="visit-card">
+      <div class="visit-header">
+        <img class="visit-img" src="../../../assets/logos/visits-logo.jpg" alt="User Image">
+        <div class="visit-info">
+          <h6>The Eternal City of Divine Blessings & Timeless Spirituality!</h6>
+        </div>
       </div>
-    </div>
-  </ion-header>
+    </ion-card> -->
+ </ion-header>
   <!-- End Header Section -->
   <!-- List Section -->
-  <div *ngFor="let content of listContent()">
-    <ion-card class="temple-list" (click)="selectTempleDetails()">
+  <div *ngFor="let content of templeContent()">
+    <ion-card class="temple-list" (click)="openModal(content,content.id)">
       <ion-row>
         <ion-col size="4" class="temple-img">
           <img [src]="content.image[0].img" alt="" />
         </ion-col>
         <ion-col size="8" class="temple-details">
           <span>{{ content?.title['en'] }}</span>
-          <span>Ujjain,(MP)</span>
+          <span>{{ content?.description['en'] | truncateWords: 4 }}</span>
           @if (content.price) {
           <span >Price: {{content.price}}</span>
           }

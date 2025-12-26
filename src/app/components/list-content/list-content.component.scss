@@ -5,7 +5,10 @@
 
 ::ng-deep ion-header {
     padding: 5px;
-    height: 25vh;
+    background-image:url('../../../assets/temple/b2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 0 0 20px 20px;
 
     ion-toolbar {

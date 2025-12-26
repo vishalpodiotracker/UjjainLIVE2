@@ -18,7 +18,7 @@
 <div class="swiper-wrapper">
   <!-- Dynamically Render Slides -->
   <ion-card class="swiper-slide ion-card-swiper" *ngFor="let slide of slideContents(); let i = index">
-    <ion-card-content class="slide-content"  [ngStyle]="{'background': 'url(' + slide.image[0].img + ')', 'background-size': 'cover', 'background-position': 'center', 'background-repeat': 'no-repeat' }" (click)="openSlide(i)">
+    <ion-card-content class="slide-content"  [ngStyle]="{'background': 'url(' + slide.image[0].img + ')', 'background-size': 'cover', 'background-position': 'center', 'background-repeat': 'no-repeat' }" (click)="openModal(slide, i)">
       <!-- <img [src]="slide.image[0].img" alt=""> -->
       <span class="slide-title" >{{ slide.title['en']?.replace('Temple', '') }}</span>
     </ion-card-content>

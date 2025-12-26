@@ -13,28 +13,35 @@
   <div class="container">
   <!-- Temple Info -->
   <div class="temple-info">
-    @if(templeVistData){
+    @if(howToVisitDataIndex){
+    <div class="heading">
+      <h3>{{howToVisitDataIndex.name.en}}</h3>
+      <div style="display: flex; flex-direction: column;">
+      <h6 style="align-items: start;">4.0</h6>
+      <div class="rating-stars">
+        <ion-icon *ngFor="let star of getStars(4.0)" [name]="star"></ion-icon>
+      </div>
+    </div>
+    </div>
+     <div class="description">
+    <p>{{howToVisitDataIndex.description.en}}</p>
+  </div>
+  }@else if(templeVistData){
     <div class="heading">
       <h3>{{templeVistData.title.en}}</h3>
       <div style="display: flex; flex-direction: column;">
-      <h6 style="align-items: start;">Rating:4.0</h6>
+      <h6 style="align-items: start;">4.0</h6>
       <div class="rating-stars">
         <ion-icon *ngFor="let star of getStars(4.0)" [name]="star"></ion-icon>
       </div>
     </div>
     </div>
-  }@else{
-    <div class="heading">
-      <h3>Chaurasi Mahadev Temple</h3>
-      <div style="display: flex; flex-direction: column;">
-      <h6 style="align-items: start;">Rating:4.0</h6>
-      <div class="rating-stars">
-        <ion-icon *ngFor="let star of getStars(4.0)" [name]="star"></ion-icon>
-      </div>
-    </div>
-    </div>
+     <div class="description">
+     <p style="white-space: pre-line;">{{ templeVistData.description.en }}</p>
+  </div>
   }
-    <div class="buttons">
+ 
+    <!-- <div class="buttons">
       <ion-button fill="outline">
         <ion-icon name="map-outline"></ion-icon> Map
       </ion-button>
@@ -44,7 +51,7 @@
       <ion-button fill="outline">
         <ion-icon name="information-circle-outline"></ion-icon> About
       </ion-button>
-    </div>
+    </div> -->
   </div>
 
   <!-- Map -->
@@ -60,12 +67,12 @@
   </div>
 
   <!-- Photos -->
-  <div class="temple-photos">
+  <div class="temple-photos" *ngIf="hasPosts">
     <h4>Photos of the temple</h4>
     <ion-grid class="photos-grid">
       <ion-row>
         <!-- Loop through each item in the array -->
-        <ion-col size="4" *ngFor="let item of postsData$ | async; let i = index">
+        <ion-col size="6" *ngFor="let item of postsData$ | async; let i = index">
           <div class="photo-item" (click)="openModal(item ,i)">
             <img alt="{{ item.title.en }}" [src]="item.image[0].img" />
             <h3>{{ item.title.en }}</h3>

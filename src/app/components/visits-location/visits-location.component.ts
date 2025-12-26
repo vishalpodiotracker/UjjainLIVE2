@@ -19,14 +19,18 @@ export class VisitsLocationComponent implements OnInit {
   @Input() userIndex: any; // Data passed from the parent component
   @Input() templeVistData: any; // Data passed from the parent component
   public postsData$ = new BehaviorSubject<any>([]);
+  public hasPosts: boolean = false;
+  howToVisitDataIndex: any;
 
   constructor(private modalController: ModalController) {}
 
   ngOnInit() {
-    if(!this.templeVistData){
-      const data = this.howToVisitData[this.userIndex];
-      const dataArry = data?.posts ?? [];
+    
+    if(this.howToVisitData){
+      this.howToVisitDataIndex = this.howToVisitData[this.userIndex];
+      const dataArry = this.howToVisitDataIndex?.posts ?? [];
       this.postsData$.next(dataArry);
+      this.hasPosts = dataArry.length > 0;
     }
      // Access data here
   }

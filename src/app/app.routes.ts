@@ -8,6 +8,7 @@ import { TempleVisitsComponent } from './components/temple-visits/temple-visits.
 import { TempleDetailsComponent } from './components/temple-details/temple-details.component';
 import { LiveDarshanComponent } from './components/live-darshan/live-darshan.component';
 import { FeedbackSupportComponent } from './components/feedback-support/feedback-support.component';
+import { ListContentComponent } from './components/list-content/list-content.component';
 
 export const routes: Routes = [
   {
@@ -32,7 +33,7 @@ export const routes: Routes = [
   },
   {
     path: 'Temples',
-    component:TempleVisitsComponent,
+    component:ListContentComponent,
   },
   {
     path: 'Settings',

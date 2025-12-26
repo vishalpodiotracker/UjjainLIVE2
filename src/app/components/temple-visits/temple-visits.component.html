@@ -29,7 +29,7 @@
   margin-left: 18px;
   font-size: 1.2rem;
   font-weight: 500;">Popular Places</h3>
-  <ion-item style="padding: 0px;">
+  <!-- <ion-item style="padding: 0px;">
 
       <div class="visit-list-header" (click)="openModal(0)">
         <img class="visit-list-img" src="../../../assets/temple/84_mahadev.jpg" alt="User Image">
@@ -40,92 +40,19 @@
         </div>
       </div>
 
-  </ion-item>
-  <ion-item style="padding: 0px;">
-    <!-- <ion-card class="visit-list-card"> -->
-      <div class="visit-list-header" (click)="openModal(1)"> 
-        <img class="visit-list-img" src="../../../assets/temple/talab.jpg" alt="User Image">
+  </ion-item> -->
+  @for(items of howToVisitData(); track items.id){
+
+    <ion-item style="padding: 0px;" (click)="openModal(items.id)">
+      <div class="visit-list-header">
+        <img class="visit-list-img" src="../../../assets/temple/84_mahadev.jpg" alt="Image">
         <div class="visit-list-info">
-          <h6>The "Sapt Sagar"</h6>
-          <p>Religious site for spiritual journeys.</p>
-          <p style="display: flex;"><ion-icon name="location-outline"></ion-icon> Ujjain (MP)</p>
+          <h6>{{items.name.en}}</h6>
+          <p>{{ items.description.en | truncateWords:10 }}</p>
         </div>
       </div>
-    <!-- </ion-card> -->
-  </ion-item>
-  <ion-item style="padding: 0px;">
-
-    <div class="visit-list-header" (click)="openModal(0)">
-      <img class="visit-list-img" src="../../../assets/temple/84_mahadev.jpg" alt="User Image">
-      <div class="visit-list-info">
-        <h6>Chaurasi Mahadev Temples</h6>
-        <p>Famous pilgrimage circuit </p>
-        <p style="display: flex;"><ion-icon name="location-outline"></ion-icon> Ujjain (MP)</p>
-      </div>
-    </div>
-
-</ion-item>
-<ion-item style="padding: 0px;">
-  <!-- <ion-card class="visit-list-card"> -->
-    <div class="visit-list-header" (click)="openModal(1)"> 
-      <img class="visit-list-img" src="../../../assets/temple/talab.jpg" alt="User Image">
-      <div class="visit-list-info">
-        <h6>The "Sapt Sagar"</h6>
-        <p>Religious site for spiritual journeys.</p>
-        <p style="display: flex;"><ion-icon name="location-outline"></ion-icon> Ujjain (MP)</p>
-      </div>
-    </div>
-  <!-- </ion-card> -->
-</ion-item>
-<ion-item style="padding: 0px;">
-
-  <div class="visit-list-header" (click)="openModal(0)">
-    <img class="visit-list-img" src="../../../assets/temple/84_mahadev.jpg" alt="User Image">
-    <div class="visit-list-info">
-      <h6>Chaurasi Mahadev Temples</h6>
-      <p>Famous pilgrimage circuit </p>
-      <p style="display: flex;"><ion-icon name="location-outline"></ion-icon> Ujjain (MP)</p>
-    </div>
-  </div>
-
-</ion-item>
-<ion-item style="padding: 0px;">
-<!-- <ion-card class="visit-list-card"> -->
-  <div class="visit-list-header" (click)="openModal(1)"> 
-    <img class="visit-list-img" src="../../../assets/temple/talab.jpg" alt="User Image">
-    <div class="visit-list-info">
-      <h6>The "Sapt Sagar"</h6>
-      <p>Religious site for spiritual journeys.</p>
-      <p style="display: flex;"><ion-icon name="location-outline"></ion-icon> Ujjain (MP)</p>
-    </div>
-  </div>
-<!-- </ion-card> -->
-</ion-item>
-<ion-item style="padding: 0px;">
-
-  <div class="visit-list-header" (click)="openModal(0)">
-    <img class="visit-list-img" src="../../../assets/temple/84_mahadev.jpg" alt="User Image">
-    <div class="visit-list-info">
-      <h6>Chaurasi Mahadev Temples</h6>
-      <p>Famous pilgrimage circuit </p>
-      <p style="display: flex;"><ion-icon name="location-outline"></ion-icon> Ujjain (MP)</p>
-    </div>
-  </div>
-
-</ion-item>
-<ion-item style="padding: 0px;">
-<!-- <ion-card class="visit-list-card"> -->
-  <div class="visit-list-header" (click)="openModal(1)"> 
-    <img class="visit-list-img" src="../../../assets/temple/talab.jpg" alt="User Image">
-    <div class="visit-list-info">
-      <h6>The "Sapt Sagar"</h6>
-      <p>Religious site for spiritual journeys.</p>
-      <p style="display: flex;"><ion-icon name="location-outline"></ion-icon> Ujjain (MP)</p>
-    </div>
-  </div>
-<!-- </ion-card> -->
-</ion-item>
-
+    </ion-item>
+  }
 </ion-list>
 
 </ion-content>
